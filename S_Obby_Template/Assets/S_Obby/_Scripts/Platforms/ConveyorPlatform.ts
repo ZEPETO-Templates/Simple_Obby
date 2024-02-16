@@ -3,7 +3,7 @@ import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import PlayerController from '../PlayerController';
 
 export default class ConveyorPlatform extends ZepetoScriptBehaviour {
-    @SerializeField() private _force: number;
+    private _force: number = 2;
 
     // Unity calls this function on a trigger collider once per frame if it detects another Collider inside the trigger collider.
     OnTriggerStay(coll: Collider) {

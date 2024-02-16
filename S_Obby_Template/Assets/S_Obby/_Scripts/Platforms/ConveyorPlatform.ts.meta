@@ -19,12 +19,13 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
-    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst PlayerController_1 = require(\"../PlayerController\");\r\nclass
-    ConveyorPlatform extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    // Unity
-    calls this function on a trigger collider once per frame if it detects another
-    Collider inside the trigger collider.\r\n    OnTriggerStay(coll) {\r\n       
-    // Check if the colliding object has the tag player\r\n        if (coll.CompareTag(\"Player\"))
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    PlayerController_1 = require(\"../PlayerController\");\r\nclass ConveyorPlatform
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n       
+    super(...arguments);\r\n        this._force = 2;\r\n    }\r\n    // Unity calls
+    this function on a trigger collider once per frame if it detects another Collider
+    inside the trigger collider.\r\n    OnTriggerStay(coll) {\r\n        // Check
+    if the colliding object has the tag player\r\n        if (coll.CompareTag(\"Player\"))
     {\r\n            // Get the player controller from the collider\r\n           
     let playerController = coll.gameObject.GetComponent($typeof(PlayerController_1.default));\r\n           
     // Push the player forwards of the conveyor\r\n            playerController._zepetoCharacter.characterController.SimpleMove(this.transform.forward);\r\n           
@@ -38,6 +39,6 @@ ScriptedImporter:
     let playerController = coll.gameObject.GetComponent($typeof(PlayerController_1.default));\r\n           
     // Set the additional walk and run speed to 0\r\n            playerController._zepetoCharacter.additionalWalkSpeed
     = 0;\r\n            playerController._zepetoCharacter.additionalRunSpeed = 0;\r\n       
-    }\r\n    }\r\n}\r\nexports.default = ConveyorPlatform;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ29udmV5b3JQbGF0Zm9ybS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkNvbnZleW9yUGxhdGZvcm0udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBZ0Q7QUFDaEQsaURBQXFEO0FBQ3JELDBEQUFtRDtBQUVuRCxNQUFxQixnQkFBaUIsU0FBUSxxQ0FBcUI7SUFHL0QsNkhBQTZIO0lBQzdILGFBQWEsQ0FBQyxJQUFjO1FBQ3hCLG1EQUFtRDtRQUNuRCxJQUFJLElBQUksQ0FBQyxVQUFVLENBQUMsUUFBUSxDQUFDLEVBQUU7WUFDM0IsOENBQThDO1lBQzlDLElBQUksZ0JBQWdCLEdBQXFCLElBQUksQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLDBCQUFnQixFQUFHLENBQUM7WUFDMUYsMkNBQTJDO1lBQzNDLGdCQUFnQixDQUFDLGdCQUFnQixDQUFDLG1CQUFtQixDQUFDLFVBQVUsQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLE9BQU8sQ0FBQyxDQUFDO1lBQ3pGLHFFQUFxRTtZQUNyRSxnQkFBZ0IsQ0FBQyxnQkFBZ0IsQ0FBQyxtQkFBbUIsR0FBRyxDQUFDLElBQUksQ0FBQyxNQUFNLENBQUM7WUFDckUsZ0JBQWdCLENBQUMsZ0JBQWdCLENBQUMsa0JBQWtCLEdBQUcsQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDO1NBQ3ZFO0lBQ0wsQ0FBQztJQUVELGdHQUFnRztJQUNoRyxhQUFhLENBQUMsSUFBYztRQUN4QixtREFBbUQ7UUFDbkQsSUFBSSxJQUFJLENBQUMsVUFBVSxDQUFDLFFBQVEsQ0FBQyxFQUFFO1lBQzNCLDhDQUE4QztZQUM5QyxJQUFJLGdCQUFnQixHQUFxQixJQUFJLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQywwQkFBZ0IsRUFBRyxDQUFDO1lBQzFGLDZDQUE2QztZQUM3QyxnQkFBZ0IsQ0FBQyxnQkFBZ0IsQ0FBQyxtQkFBbUIsR0FBRyxDQUFDLENBQUM7WUFDMUQsZ0JBQWdCLENBQUMsZ0JBQWdCLENBQUMsa0JBQWtCLEdBQUcsQ0FBQyxDQUFDO1NBQzVEO0lBQ0wsQ0FBQztDQUNKO0FBNUJELG1DQTRCQyJ9","assetPath":"Assets/S_Obby/_Scripts/Platforms/ConveyorPlatform.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"_force","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]}],"name":"ConveyorPlatform","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: ab4bf120d1eda145b728650fc22176e8
+    }\r\n    }\r\n}\r\nexports.default = ConveyorPlatform;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ29udmV5b3JQbGF0Zm9ybS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkNvbnZleW9yUGxhdGZvcm0udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFDckQsMERBQW1EO0FBRW5ELE1BQXFCLGdCQUFpQixTQUFRLHFDQUFxQjtJQUFuRTs7UUFDWSxXQUFNLEdBQVcsQ0FBQyxDQUFDO0lBMkIvQixDQUFDO0lBekJHLDZIQUE2SDtJQUM3SCxhQUFhLENBQUMsSUFBYztRQUN4QixtREFBbUQ7UUFDbkQsSUFBSSxJQUFJLENBQUMsVUFBVSxDQUFDLFFBQVEsQ0FBQyxFQUFFO1lBQzNCLDhDQUE4QztZQUM5QyxJQUFJLGdCQUFnQixHQUFxQixJQUFJLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQywwQkFBZ0IsRUFBRyxDQUFDO1lBQzFGLDJDQUEyQztZQUMzQyxnQkFBZ0IsQ0FBQyxnQkFBZ0IsQ0FBQyxtQkFBbUIsQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxPQUFPLENBQUMsQ0FBQztZQUN6RixxRUFBcUU7WUFDckUsZ0JBQWdCLENBQUMsZ0JBQWdCLENBQUMsbUJBQW1CLEdBQUcsQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDO1lBQ3JFLGdCQUFnQixDQUFDLGdCQUFnQixDQUFDLGtCQUFrQixHQUFHLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQztTQUN2RTtJQUNMLENBQUM7SUFFRCxnR0FBZ0c7SUFDaEcsYUFBYSxDQUFDLElBQWM7UUFDeEIsbURBQW1EO1FBQ25ELElBQUksSUFBSSxDQUFDLFVBQVUsQ0FBQyxRQUFRLENBQUMsRUFBRTtZQUMzQiw4Q0FBOEM7WUFDOUMsSUFBSSxnQkFBZ0IsR0FBcUIsSUFBSSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsMEJBQWdCLEVBQUcsQ0FBQztZQUMxRiw2Q0FBNkM7WUFDN0MsZ0JBQWdCLENBQUMsZ0JBQWdCLENBQUMsbUJBQW1CLEdBQUcsQ0FBQyxDQUFDO1lBQzFELGdCQUFnQixDQUFDLGdCQUFnQixDQUFDLGtCQUFrQixHQUFHLENBQUMsQ0FBQztTQUM1RDtJQUNMLENBQUM7Q0FDSjtBQTVCRCxtQ0E0QkMifQ==","assetPath":"Assets/S_Obby/_Scripts/Platforms/ConveyorPlatform.ts","manifest":{"properties":[],"name":"ConveyorPlatform","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: f2d3affb11840dd3cd1c1180fd8efec7
   onlyWriteTrigger: 0

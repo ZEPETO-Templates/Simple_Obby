@@ -3,7 +3,7 @@ import { ZepetoCharacter } from 'ZEPETO.Character.Controller';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 
 export default class TrampolinePlatform extends ZepetoScriptBehaviour {
-    @SerializeField() private _jumpForce: number; // This variable saves the jump force
+    private _jumpForce: number = 10; // This variable saves the jump force
 
     // Unity calls this function on a trigger collider once per frame if it detects another Collider inside the trigger collider.
     OnTriggerStay(coll: Collider) {
