@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: 0756d12a0e5c35d4ab4acebc36eb5ee0
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass TrampolinePlatform extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    // Unity calls this function on
+    a trigger collider once per frame if it detects another Collider inside the trigger
+    collider.\r\n    OnTriggerStay(coll) {\r\n        // Check if the colliding object
+    has the tag player\r\n        if (coll.CompareTag(\"Player\")) {\r\n           
+    // Get the zepeto character from the collider\r\n            let zepChar = coll.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n           
+    // Set the jump power with the value of the jump force\r\n            zepChar.additionalJumpPower
+    = this._jumpForce;\r\n            // Make the character jump\r\n            zepChar.Jump();\r\n       
+    }\r\n    }\r\n    // Unity calls this function on a trigger collider when it
+    ceases contact with another collider.\r\n    OnTriggerExit(coll) {\r\n       
+    if (coll.CompareTag(\"Player\")) {\r\n            // Get the zepeto character
+    from the collider\r\n            let zepChar = coll.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n           
+    // Set the jump power to 0\r\n            zepChar.additionalJumpPower = 0;\r\n       
+    }\r\n    }\r\n}\r\nexports.default = TrampolinePlatform;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVHJhbXBvbGluZVBsYXRmb3JtLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVHJhbXBvbGluZVBsYXRmb3JtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXVDO0FBQ3ZDLDZFQUE4RDtBQUM5RCxpREFBcUQ7QUFFckQsTUFBcUIsa0JBQW1CLFNBQVEscUNBQXFCO0lBR2pFLDZIQUE2SDtJQUM3SCxhQUFhLENBQUMsSUFBYztRQUN4QixtREFBbUQ7UUFDbkQsSUFBSSxJQUFJLENBQUMsVUFBVSxDQUFDLFFBQVEsQ0FBQyxFQUFFO1lBQzNCLDZDQUE2QztZQUM3QyxJQUFJLE9BQU8sR0FBb0IsSUFBSSxDQUFDLFlBQVksU0FBQyw2Q0FBZSxFQUFHLENBQUM7WUFDcEUsc0RBQXNEO1lBQ3RELE9BQU8sQ0FBQyxtQkFBbUIsR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDO1lBQzlDLDBCQUEwQjtZQUMxQixPQUFPLENBQUMsSUFBSSxFQUFFLENBQUM7U0FDbEI7SUFDTCxDQUFDO0lBQ0QsZ0dBQWdHO0lBQ2hHLGFBQWEsQ0FBQyxJQUFjO1FBQ3hCLElBQUksSUFBSSxDQUFDLFVBQVUsQ0FBQyxRQUFRLENBQUMsRUFBRTtZQUMzQiw2Q0FBNkM7WUFDN0MsSUFBSSxPQUFPLEdBQW9CLElBQUksQ0FBQyxZQUFZLFNBQUMsNkNBQWUsRUFBRyxDQUFDO1lBQ3BFLDBCQUEwQjtZQUMxQixPQUFPLENBQUMsbUJBQW1CLEdBQUcsQ0FBQyxDQUFDO1NBQ25DO0lBQ0wsQ0FBQztDQUNKO0FBeEJELHFDQXdCQyJ9","assetPath":"Assets/S_Obby/_Scripts/Platforms/TrampolinePlatform.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"_jumpForce","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]}],"name":"TrampolinePlatform","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 2142e1bdbaaf5583234b617cc06cc52e
+  onlyWriteTrigger: 0

@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: 6f3f477e168672f40a591a08ebd0b1a0
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst PlayerController_1 = require(\"../PlayerController\");\r\nclass
+    CheckpointPlatform extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this._isActive = false; // Saves
+    a flag to know if the player has already activated this\r\n    }\r\n    // Unity
+    calls this function on a trigger collider once per frame if it detects another
+    Collider inside the trigger collider.\r\n    OnTriggerStay(coll) {\r\n       
+    // Check if the colliding object has the tag player and if the checkpoint is
+    not activated yet\r\n        if (coll.CompareTag(\"Player\") && this._isActive
+    == false) {\r\n            this._isActive = true;\r\n            // Get the player
+    controller from the collider\r\n            let playerController = coll.gameObject.GetComponent($typeof(PlayerController_1.default));\r\n           
+    // Call to the function to set a new respawn\r\n            playerController.SetRespawn(this.transform.position);\r\n       
+    }\r\n    }\r\n}\r\nexports.default = CheckpointPlatform;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2hlY2twb2ludFBsYXRmb3JtLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ2hlY2twb2ludFBsYXRmb3JtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXVDO0FBQ3ZDLGlEQUFxRDtBQUNyRCwwREFBbUQ7QUFFbkQsTUFBcUIsa0JBQW1CLFNBQVEscUNBQXFCO0lBQXJFOztRQUNZLGNBQVMsR0FBUyxLQUFLLENBQUMsQ0FBQyxnRUFBZ0U7SUFjckcsQ0FBQztJQVpHLDZIQUE2SDtJQUM3SCxhQUFhLENBQUMsSUFBYztRQUN4Qiw4RkFBOEY7UUFDOUYsSUFBSSxJQUFJLENBQUMsVUFBVSxDQUFDLFFBQVEsQ0FBQyxJQUFJLElBQUksQ0FBQyxTQUFTLElBQUksS0FBSyxFQUFFO1lBQ3RELElBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDO1lBRXRCLDhDQUE4QztZQUM5QyxJQUFJLGdCQUFnQixHQUFxQixJQUFJLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQywwQkFBZ0IsRUFBRyxDQUFDO1lBQzFGLDRDQUE0QztZQUM1QyxnQkFBZ0IsQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQztTQUN4RDtJQUNMLENBQUM7Q0FDSjtBQWZELHFDQWVDIn0=","assetPath":"Assets/S_Obby/_Scripts/Platforms/CheckpointPlatform.ts","manifest":{"properties":[],"name":"CheckpointPlatform","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 267dc3daff330d7dd12a34518513f59c
+  onlyWriteTrigger: 0

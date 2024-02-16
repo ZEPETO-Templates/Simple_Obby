@@ -1,0 +1,46 @@
+fileFormatVersion: 2
+guid: 16b17114a02632948b1e167d2d5764cb
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass PlayerController extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    // Start is called on the frame
+    when a script is enabled just before any of the Update methods are called the
+    first time.\r\n    Start() {\r\n        // Get the reference of the zepeto character\r\n       
+    this._zepetoCharacter = this.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n       
+    // Set the game object tag of the player\r\n        this.gameObject.tag = \"Player\";\r\n       
+    // Set the first spawn position\r\n        this._spawnPos = this.transform.position;\r\n       
+    // When the character updates his state\r\n        this._zepetoCharacter.OnUpdateState.AddListener((state)
+    => {\r\n            // If he is landing or stamping\r\n            if (state
+    == ZEPETO_Character_Controller_1.CharacterState.Landing || state == ZEPETO_Character_Controller_1.CharacterState.Stamp)
+    {\r\n                // Set the additional jump power on 0\r\n               
+    this._zepetoCharacter.additionalJumpPower = 0;\r\n            }\r\n        });\r\n   
+    }\r\n    // Update is called every frame, if the MonoBehaviour is enabled\r\n   
+    Update() {\r\n        if (this.transform.position.y < -3) {\r\n            this.Respawn();\r\n       
+    }\r\n    }\r\n    // This function makes the player respawn\r\n    Respawn()
+    {\r\n        // If the player is not in the teleport state\r\n        if (this._zepetoCharacter.CurrentState
+    != ZEPETO_Character_Controller_1.CharacterState.Teleport) {\r\n            //
+    Teleport the player to the spawn pos\r\n            this._zepetoCharacter.Teleport(this._spawnPos,
+    UnityEngine_1.Quaternion.identity);\r\n        }\r\n    }\r\n    // This function
+    set a new spawn position\r\n    SetRespawn(position) {\r\n        this._spawnPos
+    = position;\r\n    }\r\n}\r\nexports.default = PlayerController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUGxheWVyQ29udHJvbGxlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlBsYXllckNvbnRyb2xsZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBa0Q7QUFDbEQsNkVBQStFO0FBQy9FLGlEQUFxRDtBQUVyRCxNQUFxQixnQkFBaUIsU0FBUSxxQ0FBcUI7SUFJL0QseUhBQXlIO0lBQ3pILEtBQUs7UUFDRCw0Q0FBNEM7UUFDNUMsSUFBSSxDQUFDLGdCQUFnQixHQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLDZDQUFlLEVBQUcsQ0FBQztRQUN4RSx3Q0FBd0M7UUFDeEMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxHQUFHLEdBQUcsUUFBUSxDQUFDO1FBQy9CLCtCQUErQjtRQUMvQixJQUFJLENBQUMsU0FBUyxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDO1FBRXpDLHVDQUF1QztRQUN2QyxJQUFJLENBQUMsZ0JBQWdCLENBQUMsYUFBYSxDQUFDLFdBQVcsQ0FBQyxDQUFDLEtBQUssRUFBRSxFQUFFO1lBQ3RELCtCQUErQjtZQUMvQixJQUFJLEtBQUssSUFBSSw0Q0FBYyxDQUFDLE9BQU8sSUFBSSxLQUFLLElBQUksNENBQWMsQ0FBQyxLQUFLLEVBQUU7Z0JBQ2xFLHFDQUFxQztnQkFDckMsSUFBSSxDQUFDLGdCQUFnQixDQUFDLG1CQUFtQixHQUFHLENBQUMsQ0FBQzthQUNqRDtRQUNMLENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUNELGdFQUFnRTtJQUNoRSxNQUFNO1FBQ0YsSUFBSSxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxDQUFDLEVBQUU7WUFDaEMsSUFBSSxDQUFDLE9BQU8sRUFBRSxDQUFDO1NBQ2xCO0lBQ0wsQ0FBQztJQUVELHlDQUF5QztJQUN6QyxPQUFPO1FBQ0gsNkNBQTZDO1FBQzdDLElBQUksSUFBSSxDQUFDLGdCQUFnQixDQUFDLFlBQVksSUFBSSw0Q0FBYyxDQUFDLFFBQVEsRUFBRTtZQUMvRCx1Q0FBdUM7WUFDdkMsSUFBSSxDQUFDLGdCQUFnQixDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsU0FBUyxFQUFFLHdCQUFVLENBQUMsUUFBUSxDQUFDLENBQUM7U0FDdkU7SUFDTCxDQUFDO0lBRUQseUNBQXlDO0lBQ3pDLFVBQVUsQ0FBQyxRQUFpQjtRQUN4QixJQUFJLENBQUMsU0FBUyxHQUFHLFFBQVEsQ0FBQztJQUM5QixDQUFDO0NBQ0o7QUExQ0QsbUNBMENDIn0=","assetPath":"Assets/S_Obby/_Scripts/PlayerController.ts","manifest":{"properties":[{"assembly":"ZEPETO.Character.Controller","name":"_zepetoCharacter","type":"ZEPETO.Character.Controller.ZepetoCharacter","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"PlayerController","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 0fa7e67c68dfaa628f50e92cbd9adf29
+  onlyWriteTrigger: 0
