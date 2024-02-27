@@ -1,25 +1,22 @@
-
-# Fashion Battle Template
+# Simplified Obby Template
 
 ## 📢 About
 
-Nice to meet you Creators! 👋 Welcome to Fashion Battle guide! <br>
+Nice to meet you Creators! 👋 Welcome to Obby guide! <br>
 
-With Fashion Battle you can create amazing worlds to play with your friends! <br>
+With Obby you can create amazing worlds to play with your friends! <br>
 
 Now, are you ready to start? <br>
 
+
 ## Overview
 
-In this game, players dress according to a random theme and walk down a runway to rate/vote for the best outfit. <br>
-Once the lobby has enough players, the stage loads. All players enter the scenario, and a random theme is selected.
-Players dress up using costumes from their inventory following the theme before the end of the dress-up time.
-After all players have walked the runway, a voting button appears below them.
-The player with the most votes wins. <br>
+A simplified version of the Obby template, it will show a few things to create simple levels and worlds with this mechanic having 3 types of platforms, moving platforms, teleporters and red platforms that will make the player lose.
+ <br>
 
   
 
-## ❓ How to create with Fashion Battle Template
+## ❓ How to create with Obby Template
 
 :wrench: Installation and settings
 
@@ -76,12 +73,12 @@ Then click on the file ".unitypackage" and import it in a new project of Unity!
 
 
 ## ❓ FAQ
-<details> <summary> <h3>How to open the project</h3> </summary>
+<details><summary><h3>How to open the project</h3> </summary>
 
 Select the template folder and it will open the project.
 <br><img src = "docs/images/howto/unityproject.png" alt = "unity project img" width="600"></img>
 
-<details> <summary> To open a Unity project for the first time, follow these steps:</summary>
+<details><summary>To open a Unity project for the first time, follow these steps:</summary>
 
 1. Launch Unity Hub.
 2. In Unity Hub, click on the "Projects" tab on the left side.
@@ -92,9 +89,9 @@ Select the template folder and it will open the project.
 </details>
 
 
-<details> <summary> <h3>How to play</h3> </summary> 
+<details><summary><h3>How to play</h3> </summary> 
 1. Just open the scene [double click on the green underlined object]. <br>
-<br><img src = "docs/images/howto/InitFashion.png" alt = "Init Fashion img" width="600"></img><br><br>
+<br><img src = "docs/images/howto/Init.png" alt = "Init img" width="600"></img><br><br>
 2. Press the play button:
 <br><img src = "docs/images/howto/howtoplay.png" alt = "how to play img" width="400"></img><br>
 </details>
@@ -114,19 +111,20 @@ Then you can build your world as you want with the platforms that you want!
 <br><img src = "docs/images/platformbuilding_gif.gif" alt = "platform building gif"></img><br>
 
 
-<details> <summary> <h3>Player Spawner</h3> </summary> 
+<details><summary><h3>Player Spawner</h3> </summary> 
 This class only has the behaviour to create a zepeto character in the world.
 <br><img src = "docs/images/playerspawner.png" alt = "playerspawner img"></img><br><br>
 </details>
 
-<details> <summary> <h3>Player controller</h3> </summary> 
+<details><summary><h3>Player controller</h3> </summary> 
 This class handles the behaviour related to the player, has the respawn settings.
 <br><img src = "docs/images/playerspawner.png" alt = "playerspawner img"></img><br><br>
 </details>
 
-<details id="prefabs"> <summary> <h3>Platform prefabs</h3> </summary> 
+<details id="prefabs"><summary><h3>Platform prefabs</h3> </summary> 
 You could find the platform prefabs on the folder "Prefabs" on the project.
 <br><img src = "docs/images/prefabsfolder.png" alt = "prefabs folder img"></img><br><br>
+
 <details><summary>Basic platform</summary> 
 - Just a basic platform with no behaviour where you can walk on.
 <br><img src = "docs/images/basicplatform.png" alt = "basic platform img"></img><br><br>
@@ -162,4 +160,32 @@ It has this script attached.
 
 </details>
 
+
+## :point_right: You can easily modify this:
+
+<h3>Creating your first world in Unity:</h3>
+
+1. Open Unity: Open the template.
+2. Add Platforms to the Scene:  You could find the platform prefabs on the folder "Prefabs" on the project. Drag and drop the platform prefabs into the scene. Arrange them as you want your world to look.
+<br><img src = "docs/images/prefabsfolder.png" alt = "prefabs folder img"></img><br><br>
+3. The first platform has to be in the (0,0,0) position in the world so your player will spawn there.
+4. Edit Platform Positions: Select the platforms in the scene and use the Move tool (shortcut key W) to adjust their positions. You can also rotate them using the Rotate tool (shortcut key E).
+5. Add Details: Add other elements like obstacles, decorations, or characters to your world to make it more interesting and engaging.
+6. Test Your World: Click the Play button at the top of the Unity editor to test your world. Make sure everything looks and behaves as expected.
+7. Save Your Scene:  save the scene by going to "File" > "Save Scene" and give it a name.
+
+
+
+<h3>UI Prefabs</h3>
+You can edit every panel of each part of the game from their own prefab.
+You can found them in the project folder.
+
+  To modify UI prefabs in Unity, follow these steps:
+1. Locate the UI prefab you want to modify. You can find prefabs in the project folder under the "Prefabs" directory or in a specific folder for UI elements.
+2. Double-click on the UI prefab to open it in the Prefab Editor.
+3. In the Prefab Editor, you can modify the UI elements as needed. This may include changing text, images, layouts, or adding/removing components.
+4. Once you have made your modifications, save the prefab by clicking the "Apply" button in the Prefab Editor.
+5. To apply the changes to instances of the prefab in your scene, select each instance and click the "Apply" button in the Inspector window.
+6. Test your changes in Play mode to ensure they work as expected.
+7. If you need to make further modifications, repeat the above steps.
 
