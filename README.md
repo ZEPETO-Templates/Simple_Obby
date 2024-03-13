@@ -73,7 +73,7 @@ Then click on the file ".unitypackage" and import it in a new project of Unity!
 
 
 ## ❓ FAQ
-<details><summary><h3>How to open the project</h3> </summary>
+<details><summary>How to open the project </summary>
 
 Select the template folder and it will open the project.
 <br><img src = "docs/images/howto/unityproject.png" alt = "unity project img" width="600"></img>
@@ -89,7 +89,7 @@ Select the template folder and it will open the project.
 </details>
 
 
-<details><summary><h3>How to play</h3> </summary> 
+<details><summary>How to play </summary> 
 1. Just open the scene [double click on the green underlined object]. <br>
 <br><img src = "docs/images/howto/Init.png" alt = "Init img" width="600"></img><br><br>
 2. Press the play button:
@@ -111,17 +111,17 @@ Then you can build your world as you want with the platforms that you want!
 <br><img src = "docs/images/platformbuilding_gif.gif" alt = "platform building gif"></img><br>
 
 
-<details><summary><h3>Player Spawner</h3> </summary> 
+<details><summary>Player Spawner </summary> 
 This class only has the behaviour to create a zepeto character in the world.
 <br><img src = "docs/images/playerspawner.png" alt = "playerspawner img"></img><br><br>
 </details>
 
-<details><summary><h3>Player controller</h3> </summary> 
+<details><summary>Player controller </summary> 
 This class handles the behaviour related to the player, has the respawn settings.
 <br><img src = "docs/images/playerspawner.png" alt = "playerspawner img"></img><br><br>
 </details>
 
-<details id="prefabs"><summary><h3>Platform prefabs</h3> </summary> 
+<details id="prefabs"><summary>Platform prefabs </summary> 
 You could find the platform prefabs on the folder "Prefabs" on the project.
 <br><img src = "docs/images/prefabsfolder.png" alt = "prefabs folder img"></img><br><br>
 
